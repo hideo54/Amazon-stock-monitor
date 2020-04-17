@@ -1,5 +1,5 @@
 {
-  "name": "ringfit-stock-monitor",
+  "name": "amazon-stock-monitor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hideo54/RingFit-stock-monitor.git"
+    "url": "git+https://github.com/hideo54/Amazon-stock-monitor.git"
   },
   "author": "hideo54",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hideo54/RingFit-stock-monitor/issues"
+    "url": "https://github.com/hideo54/Amazon-stock-monitor/issues"
   },
-  "homepage": "https://github.com/hideo54/RingFit-stock-monitor#readme",
+  "homepage": "https://github.com/hideo54/Amazon-stock-monitor#readme",
   "dependencies": {
     "scrape-it": "^5.2.3",
     "typescript": "^3.8.3"
