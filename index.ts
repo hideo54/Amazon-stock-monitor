@@ -1,21 +1,30 @@
 import scrapeIt from 'scrape-it';
+import schedule from 'node-schedule';
 
 const url = 'https://www.amazon.co.jp/dp/B07XV8VSZT/'; // Ring Fit
 
 interface AmazonStockData {
     title: string;
-    buybox: string;
+    buyboxTextContent: string;
 }
 
 const checkStock = async (url: string) => {
     const { data } = await scrapeIt<AmazonStockData>(url, {
         title: 'span#productTitle',
-        buybox: 'div#buybox',
+        buyboxTextContent: 'div#buybox',
     });
-    return data.buybox.includes('カートに入れる');
+    return data.buyboxTextContent.includes('カートに入れる');
 };
 
-(async () => {
+const job = async () => {
     const isInStock = await checkStock(url);
     console.log(isInStock);
-})();
+};
+
+if (process.env.NODE_ENV === 'develop') {
+    (async () => {
+        await job();
+    })();
+} else {
+    schedule.scheduleJob('*/10 * * * * *', job); // every 10 seconds
+}
