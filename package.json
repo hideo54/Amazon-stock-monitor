@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hideo54/RingFit-stock-monitor#readme",
   "dependencies": {
+    "scrape-it": "^5.2.3",
     "typescript": "^3.8.3"
   }
 }
