@@ -32,7 +32,7 @@ const job = async () => {
     if (isInStock) {
         await webClient.chat.postMessage({
             channel: slackChannel,
-            text: `Amazon に *${title}* が入荷したよ〜! 今すぐ購入!! ${url}`,
+            text: `<!channel> Amazon に *${title}* が入荷したよ〜! 今すぐ購入!! ${url}`,
             icon_emoji: ':amazon:',
             username: 'Amazon入荷情報',
         });
