@@ -23,7 +23,7 @@ const checkStock = async (url: string) => {
     });
     return {
         title: data.title,
-        isInStock: data.buyboxTextContent.includes('カートに入れる')
+        isInStock: data.buyboxTextContent.includes('今すぐ買う'),
     };
 };
 
